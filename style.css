@@ -170,6 +170,30 @@ header {
     align-items: center;
 }
 
+.interests-section .section-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.interests-section .section-heading {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.interests-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.column-subheading {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
 /* Background section */
 .background-section {
     background-color: #fadfff;

@@ -72,12 +72,12 @@ body {
 
 /* Hover state for navigation links */
 .nav-menu a:hover {
-    color: #f6d106;
+    color: #ff7f02;
 }
 
 /* Active state for current section */
 .nav-menu a.active {
-    color: #f6d106;
+    color: #ff7f02;
 }
 
 
@@ -124,7 +124,7 @@ header {
 .main-name {
     font-family: 'Brush Script MT', cursive;
     font-size: 285px;
-    color: #ffe400;
+    color: #ff7f02;
     font-weight: normal;
     margin: 20px 0;
     line-height: 1;
@@ -192,7 +192,7 @@ header {
 .section-heading {
     font-family: 'Brush Script MT', cursive;
     font-size: 72px;
-    color: #ffde00;
+    color: #ff7f02;
     margin: 30px 0;
     transform: rotate(-1deg);
 }
@@ -263,7 +263,7 @@ footer {
 
 /* Contact link hover state */
 .contact-details a:hover {
-    color: #f6d106;
+    color: #ff7f02;
 }
 
 /* Copyright text */

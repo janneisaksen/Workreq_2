@@ -1,0 +1,328 @@
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #fce7ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =================================================================
+   Navigation Bar
+================================================================= */
+
+/* Fixed header that stays at top during scroll */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fce7ff;
+    z-index: 1000;
+}
+
+/* Navigation container - centers and constrains nav content */
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Portfolio branding in navigation */
+.nav-logo {
+    font-family: 'Brush Script MT', serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* Navigation menu list */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+/* Navigation link styling */
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* Hover state for navigation links */
+.nav-menu a:hover {
+    color: #f6d106;
+}
+
+/* Active state for current section */
+.nav-menu a.active {
+    color: #f6d106;
+}
+
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+/* =================================================================
+   Hero Section (Header/Home)
+================================================================= */
+
+/* Main header/hero section */
+header {
+    background-color: #fce7ff;
+    padding: 120px 40px 60px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Header content container */
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    position: relative;
+}
+
+/* Container for main name/logo */
+.logo-section {
+    position: relative;
+    z-index: 10;
+    margin-right: -100px;
+}
+
+/* Main name display - large handwritten style */
+.main-name {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 285px;
+    color: #ffe400;
+    font-weight: normal;
+    margin: 20px 0;
+    line-height: 1;
+    transform: rotate(-2deg);
+    position: relative;
+    z-index: 10;
+}
+
+/* Portrait image container */
+.header-image {
+    text-align: right;
+    position: relative;
+    z-index: 5;
+}
+
+/* Portrait image styling */
+.portrait-image {
+    width: 600px;
+    height: 440px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+/* =================================================================
+   Content Sections (About, Interests, Background)
+================================================================= */
+
+/* About section */
+.about-section {
+    background-color: #fadfff;
+    padding: 60px 40px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Interests section */
+.interests-section {
+    background-color: #fce7ff;
+    padding: 60px 40px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Background section */
+.background-section {
+    background-color: #fadfff;
+    padding: 60px 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Content container for sections */
+.section-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* Full name display in about section */
+.section-heading {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 72px;
+    color: #ffde00;
+    margin: 30px 0;
+    transform: rotate(-1deg);
+}
+
+/* Text paragraph styling */
+.text-paragraph {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* =================================================================
+   Footer
+================================================================= */
+
+/* Footer section with contact information */
+footer {
+    background-color: #fce7ff;
+    color: #333;
+    text-align: center;
+    padding: 80px 40px;
+    font-size: 16px;
+}
+
+/* Contact information block */
+.contact-info {
+    margin-bottom: 40px;
+}
+
+/* Contact heading */
+.contact-info h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: px;
+}
+
+/* Contact details container */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-details p {
+    font-size: 15px;
+    margin: 0;
+    color: #444;
+}
+
+.contact-details strong {
+    font-weight: 500;
+    color: #666;
+    margin-right: 10px;
+}
+
+/* Contact links */
+.contact-details a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Contact link hover state */
+.contact-details a:hover {
+    color: #f6d106;
+}
+
+/* Copyright text */
+.copyright {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #fadfff;
+    font-size: 12px;
+    color: #999;
+}
+
+/* =================================================================
+   Responsive Design - Mobile/Tablet
+================================================================= */
+
+/* Tablet and mobile styles */
+@media (max-width: 768px) {
+    /* Mobile navigation adjustments */
+    .nav-container {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-logo {
+        font-size: 22px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    /* Mobile header adjustments */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-name {
+        font-size: 80px;
+    }
+
+    .portrait-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .name-display {
+        font-size: 60px;
+    }
+
+    /* Add extra top padding for mobile nav */
+    header {
+        padding-top: 160px;
+    }
+}

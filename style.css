@@ -253,7 +253,7 @@ footer {
     margin: 0 auto;
 }
 .footer-left {
-    flex: 1;
+    flex: 2;
     min-width: 250px;
     text-align: left;
 }
@@ -263,7 +263,7 @@ footer {
     text-align: left;
 }
 
-.footer-title {
+h1.footer-title {
     font-family: 'Brush Script MT', cursive;
     font-size: 140px; /* increased size for larger display */
     color: #ff7f02;
@@ -272,22 +272,13 @@ footer {
     /* keep all words lowercase by default; each span will capitalize its first letter */
     text-transform: none;
 }
-.footer-left {
-    flex: 3; /* more space for the title */
-}
-.footer-title span {
-    display: inline; /* horizontal layout */
-    text-transform: lowercase;
-}
-.footer-title span::first-letter {
-    text-transform: uppercase;
-}
-
-.footer-left {
-    flex: 2; /* take up more horizontal space */
-}
 .footer-title span {
     display: block;
+    text-transform: lowercase;
+}
+
+.footer-title span::first-letter {
+    text-transform: uppercase;
 }
 
 /* form row: two fields side by side */
@@ -318,7 +309,7 @@ footer {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 8px 10px;
+    padding: 8px 0 8px 0;
     font-size: 16px;
     border: none;
     border-bottom: 1px solid #c9a0c0;
@@ -354,23 +345,9 @@ footer {
     margin-bottom: 40px;
 }
 
-.contact-info-heading {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 26px;
-    color: #ff7f02;
-    margin: 20px 0 10px;
-    text-align: left;
-}
-
 /* Make contact details text black instead of gray */
 .contact-details p {
     color: #000;
-}
-
-/* two-column contact info layout */
-.contact-details.two-column {
-    display: flex;
-    gap: 30px;
 }
 
 /* Heading above contact form */
@@ -403,6 +380,11 @@ footer {
     margin-right: 10px;
 }
 
+.address-info {
+    margin-left: auto;
+    text-align: right;
+}
+
 /* Contact links */
 .contact-details a {
     color: #333;
@@ -427,6 +409,16 @@ footer {
 /* =================================================================
    Responsive Design - Mobile/Tablet
 ================================================================= */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .contact-details {
+        max-width: 100%;
+        margin: 0;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: nowrap;
+    }
+}
 
 /* Tablet and mobile styles */
 @media (max-width: 768px) {
@@ -483,8 +475,9 @@ footer {
     }
 
     /* Footer responsive adjustments */
-    .footer-title {
-        font-size: 60px;
+    h1.footer-title {
+        font-size: clamp(44px, 10vw, 60px);
+        line-height: 1.1;
         text-align: center;
     }
 
@@ -497,5 +490,33 @@ footer {
     .footer-right {
         flex: 1;
         min-width: 100%;
+    }
+
+    .contact-details {
+        max-width: 100%;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .form-heading {
+        font-size: 22px;
+    }
+
+    .contact-form label {
+        font-size: 14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .contact-form button {
+        font-size: 16px;
+        padding: 12px 22px;
     }
 }
